@@ -3,102 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PetPrime India – Coming Soon</title>
+<title>PetPrime India – For Pets Who Deserve Prime Care</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #fef8e7;
-        font-family: "Poppins", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-    }
 
-    .container {
-        padding: 20px;
-        max-width: 500px;
-        animation: fadeIn 1.2s ease-in-out;
-        text-align:center;
-    }
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #F8F8F9;
+    color: #1A1A1A;
+}
 
-    img.logo {
-        width:500px;
-        margin-bottom: 0;
-         text-align: center;
-    }
+header {
+    background: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 
-    h1 {
+header img {
+    height: 55px;
+}
+
+/* Navigation */
+nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #1A3365;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #F6C343;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1A3365, #2d4a88);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    background: #F6C343;
+    color: #1A3365;
+    border: none;
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #ffe18a;
+}
+
+/* Categories Section */
+.categories {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    color: #1A3365;
+    margin-bottom: 25px;
+}
+
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.cat-box {
+    background: white;
+    padding: 25px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: 0.2s;
+}
+
+.cat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.cat-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.cat-box p {
+    font-weight: 600;
+}
+
+/* About Section */
+.about {
+    padding: 60px 25px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    color: #1A3365;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background: #1A3365;
+    color: white;
+    text-align: center;
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 12px 28px;
+    border: none;
+    background: #F6C343;
+    color: #1A3365;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #ffdf80;
+}
+
+/* Footer */
+footer {
+    background: #0F2148;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    .hero h1 {
         font-size: 26px;
-        color: #1A3365; /* Royal Blue */
-        margin-bottom: 5px;
     }
-
-    p.tagline {
-        font-size: 15px;
-        color: #444;
-        margin-bottom: 20px;
-    }
-
-    .coming {
-        font-size: 20px;
-        color: #F6C343; /* Gold */
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 25px;
-    }
-
-    input {
-        padding: 10px 14px;
-        width: 70%;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        font-size: 14px;
-    }
-
-    button {
-        background: #1A3365;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 6px;
-        border: none;
-        cursor: pointer;
-        margin-top: 12px;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    button:hover {
-        background: #0F2148;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+}
 
 </style>
 </head>
+
 <body>
 
-<div class="container">
-    <img src="images/logo.png" class="logo" alt="PetPrime India Logo">
+<header>
+    <img src="images/logo.png" alt="PetPrime India Logo">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <h1>PetPrime India</h1>
-    <p class="tagline">For pets who deserve prime care.</p>
+<section class="hero">
+    <h1>For Pets Who Deserve Prime Care</h1>
+    <p>Premium food, toys, grooming & accessories delivered to your home across Kerala.</p>
+    <button onclick="window.location='#shop'">Explore Products</button>
+</section>
 
-    <div class="coming">We’re Launching Soon 🚀</div>
+<section id="shop" class="categories">
+    <h2>Shop by Category</h2>
 
-    <p>Stay updated — enter your email & get early access!</p>
+    <div class="cat-grid">
+        <div class="cat-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/194/194279.png">
+            <p>Dog Supplies</p>
+        </div>
+        <div class="cat-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+            <p>Cat Supplies</p>
+        </div>
+        <div class="cat-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/438/438526.png">
+            <p>Bird & Fish</p>
+        </div>
+        <div class="cat-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998611.png">
+            <p>Grooming</p>
+        </div>
+        <div class="cat-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2171/2171990.png">
+            <p>Treats & Toys</p>
+        </div>
+    </div>
+</section>
 
-    <input type="email" placeholder="Enter email to notify">
-    <br>
-    <button>Notify Me</button>
-</div>
+<section id="about" class="about">
+    <h2>About PetPrime India</h2>
+    <p>
+        At PetPrime India, we believe pets are family. Our mission is to bring 
+        premium-quality food, toys, grooming products, and health essentials to 
+        every pet home across Kerala. We carefully source trusted brands and 
+        ensure safe delivery with love — because your pets deserve only the best.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to place an order?</p>
+    <button onclick="window.location='https://wa.me/91XXXXXXXXXX'">
+        WhatsApp Us
+    </button>
+</section>
+
+<footer>
+    © 2025 PetPrime India. All Rights Reserved.
+</footer>
 
 </body>
 </html>
-
