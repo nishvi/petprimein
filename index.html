@@ -2,25 +2,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deema Widget Test</title>
 </head>
-
 <body>
-    <h1>Hello World</h1>
+
+  <h2>Product Page</h2>
+  <p>Price: 45.000 KWD</p>
+
+  <!-- Deema config must be defined BEFORE the script loads -->
   <script>
-  var deemaWidgetConfiguration = {
-     publicKey: "sk_live_BefnjUcz6vD5miyjEbh1yRFMLqwJiEmoxlS8fiGr_4",
-  };
-</script>
+    var deemaWidgetConfiguration = {
+      publicKey: "sk_live_BefnjUcz6vD5miyjEbh1yRFMLqwJiEmoxlS8fiGr_4"
+    };
+  </script>
 
-<script src="{https://widget.deema.me}"></script>
+  <script src="https://sandbox-widget.deema.me"></script>
 
-<deema-widget amount="120" currency="KWD"></deema-widget>
+  <deema-widget amount="45.000" currency="KWD"></deema-widget>
 
 </body>
-
 </html>
